@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    container_name: ellis_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    # O comando para iniciar a aplicação já está definido no Dockerfile.
+    # A flag --reload garantirá que o servidor reinicie automaticamente
+    # quando você alterar um arquivo, graças ao volume que montamos.
